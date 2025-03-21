@@ -2,10 +2,10 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { ViolationIcon } from './ViolationIcon';
+import { ViolationIcon, ViolationType } from './ViolationIcon';
 
 type Violation = {
-  type: 'window' | 'image' | 'time' | 'headphones' | 'cellphone' | 'other';
+  type: ViolationType;
   count: number;
   severity: 'low' | 'medium' | 'high';
   details?: string;
@@ -48,7 +48,7 @@ export const ProctoringViolations = ({ violations, className }: ProctoringViolat
     }
     
     return acc;
-  }, {} as Record<string, { count: number; highestSeverity: 'low' | 'medium' | 'high'; details: string[] }>);
+  }, {} as Record<ViolationType, { count: number; highestSeverity: 'low' | 'medium' | 'high'; details: string[] }>);
 
   return (
     <div className={cn("flex items-center gap-2 py-1", className)}>
@@ -58,7 +58,7 @@ export const ProctoringViolations = ({ violations, className }: ProctoringViolat
             <TooltipTrigger asChild>
               <div className="relative">
                 <ViolationIcon 
-                  type={type as any} 
+                  type={type as ViolationType} 
                   severity={data.highestSeverity} 
                   size={20}
                   className="transition-all hover:scale-110"
@@ -77,7 +77,7 @@ export const ProctoringViolations = ({ violations, className }: ProctoringViolat
             >
               <div className="text-xs space-y-1">
                 <div className="font-medium flex items-center gap-1.5">
-                  <ViolationIcon type={type as any} severity={data.highestSeverity} size={12} />
+                  <ViolationIcon type={type as ViolationType} severity={data.highestSeverity} size={12} />
                   <span>
                     {type.charAt(0).toUpperCase() + type.slice(1)} Violation
                     {data.count > 1 ? `s (${data.count})` : ''}
