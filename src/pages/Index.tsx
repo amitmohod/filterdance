@@ -10,7 +10,6 @@ import ProctoringSeverityBadge from '@/components/ProctoringSeverityBadge';
 import ProctoringFilters, { ViolationFilters } from '@/components/ProctoringFilters';
 import ProctoringViolations from '@/components/ProctoringViolations';
 import ProctoringStatsCard from '@/components/ProctoringStatsCard';
-import { ViolationType } from '@/components/ViolationIcon';
 import { 
   ChevronLeft, 
   Filter, 
@@ -38,9 +37,9 @@ const candidatesData = [
     completedDate: '17-Feb-2025, 05:17 PM',
     appearedDate: '17-Feb-2025, 04:50 PM',
     violations: [
-      { type: 'window' as ViolationType, count: 1, severity: 'medium' as const, details: '2 minutes' },
-      { type: 'image' as ViolationType, count: 1, severity: 'medium' as const, details: '4 violations' },
-      { type: 'headphones' as ViolationType, count: 1, severity: 'medium' as const },
+      { type: 'window', count: 1, severity: 'medium' as const, details: '2 minutes' },
+      { type: 'image', count: 1, severity: 'medium' as const, details: '4 violations' },
+      { type: 'headphones', count: 1, severity: 'medium' as const },
     ],
     candidateStatus: 'Not Assigned',
   },
@@ -55,9 +54,9 @@ const candidatesData = [
     completedDate: '13-Feb-2025, 03:56 PM',
     appearedDate: '13-Feb-2025, 03:19 PM',
     violations: [
-      { type: 'window' as ViolationType, count: 1, severity: 'low' as const, details: '5 seconds' },
-      { type: 'image' as ViolationType, count: 1, severity: 'medium' as const, details: '3 violations' },
-      { type: 'time' as ViolationType, count: 1, severity: 'low' as const, details: 'Early finisher' },
+      { type: 'window', count: 1, severity: 'low' as const, details: '5 seconds' },
+      { type: 'image', count: 1, severity: 'medium' as const, details: '3 violations' },
+      { type: 'time', count: 1, severity: 'low' as const, details: 'Early finisher' },
     ],
     candidateStatus: 'Not Assigned',
   },
@@ -72,11 +71,11 @@ const candidatesData = [
     completedDate: '13-Feb-2025, 03:56 PM',
     appearedDate: '13-Feb-2025, 03:19 PM',
     violations: [
-      { type: 'window' as ViolationType, count: 1, severity: 'high' as const, details: '5 minutes' },
-      { type: 'image' as ViolationType, count: 1, severity: 'medium' as const, details: '3 violations' },
-      { type: 'time' as ViolationType, count: 1, severity: 'high' as const, details: 'Very early' },
-      { type: 'headphones' as ViolationType, count: 1, severity: 'medium' as const },
-      { type: 'cellphone' as ViolationType, count: 1, severity: 'high' as const },
+      { type: 'window', count: 1, severity: 'high' as const, details: '5 minutes' },
+      { type: 'image', count: 1, severity: 'medium' as const, details: '3 violations' },
+      { type: 'time', count: 1, severity: 'high' as const, details: 'Very early' },
+      { type: 'headphones', count: 1, severity: 'medium' as const },
+      { type: 'cellphone', count: 1, severity: 'high' as const },
     ],
     candidateStatus: 'Not Assigned',
   },
@@ -91,8 +90,8 @@ const candidatesData = [
     completedDate: '13-Feb-2025, 03:56 PM',
     appearedDate: '13-Feb-2025, 03:19 PM',
     violations: [
-      { type: 'cellphone' as ViolationType, count: 1, severity: 'high' as const },
-      { type: 'headphones' as ViolationType, count: 1, severity: 'medium' as const },
+      { type: 'cellphone', count: 1, severity: 'high' as const },
+      { type: 'headphones', count: 1, severity: 'medium' as const },
     ],
     candidateStatus: 'Not Assigned',
   },
@@ -107,8 +106,8 @@ const candidatesData = [
     completedDate: '13-Feb-2025, 03:56 PM',
     appearedDate: '13-Feb-2025, 03:19 PM',
     violations: [
-      { type: 'window' as ViolationType, count: 1, severity: 'low' as const, details: '8 seconds' },
-      { type: 'image' as ViolationType, count: 1, severity: 'low' as const, details: '1 violation' },
+      { type: 'window', count: 1, severity: 'low' as const, details: '8 seconds' },
+      { type: 'image', count: 1, severity: 'low' as const, details: '1 violation' },
     ],
     candidateStatus: 'Not Assigned',
   },
